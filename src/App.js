@@ -1,21 +1,32 @@
 import React, { useState } from 'react';
 import TeamMembers from './components/TeamMembers';
 import TeamMemberForm from './components/TeamMemberForm';
-import logo from './logo.svg';
 import './App.css';
+import { notStrictEqual } from 'assert';
 
 function App() {
-  const [teamMembers, setTeamMembers] = useState('');
+  const [teamMembers, setTeamMembers] = useState([
+    {
+      name: '',
+      email: '',
+      role: '',
+    }
+  ]);
 
   const addTeamMember = member => {
-    setTeamMembers([...teamMembers, member]);
+    const newMember = {
+      name: member.name,
+      email: member.email,
+      role: member.role
+    }
+    setTeamMembers([...teamMembers, newMember])
   };
 
   return (
     <div className="App">
       <h2>Team Members</h2>
-      <TeamMemberForm />
-      <TeamMembers />
+      <TeamMemberForm addTeamMember={addTeamMember} />
+      <TeamMembers teamMembers={teamMembers} />
     </div>
   );
 }
