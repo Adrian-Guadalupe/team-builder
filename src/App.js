@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import TeamMembers from './components/TeamMembers';
 import TeamMemberForm from './components/TeamMemberForm';
 import './App.css';
-import { notStrictEqual } from 'assert';
 
 function App() {
   const [teamMembers, setTeamMembers] = useState([
