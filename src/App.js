@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {Route} from 'react-router-dom';
 import TeamMembers from './components/TeamMembers';
 import TeamMemberForm from './components/TeamMemberForm';
 import './App.css';
@@ -26,6 +27,12 @@ function App() {
       <h2>Team Members</h2>
       <TeamMemberForm addTeamMember={addTeamMember} />
       <TeamMembers teamMembers={teamMembers} />
+      {/* <Route
+        path='/team-members'
+        render={() => {
+          return <TeamMembers teamMembers={teamMembers} />
+        }}
+      /> */}
     </div>
   );
 }

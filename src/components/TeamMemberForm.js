@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const TeamMemberForm = ({ addTeamMember }) => {
+const TeamMemberForm = ({addTeamMember}) => {
    const [member, setMember] = useState({
       name: '',
       email: '',
@@ -20,6 +20,10 @@ const TeamMemberForm = ({ addTeamMember }) => {
          role: '',
       });
    };
+
+   // const routeToMembers = () => {
+   //    props.history.push('/team-members');
+   // };
 
    return (
       <form onSubmit={submitForm}>
@@ -44,16 +48,31 @@ const TeamMemberForm = ({ addTeamMember }) => {
          />
 
          <label htmlFor='role'>Role</label>
-         <input 
+         <select 
             id='role'
             type='text'
             name='role'
             placeholder='Enter role here'
             onChange={handleChanges}
             value={member.role}
-         />
+         >
+            <option value='Select Role'>Select Role</option>
+            <option value='Front-End Engineer'>
+               Front-End Engineer
+            </option>
+            <option value='Back-End Engineer'>
+               Back-End Engineer
+            </option>
+            <option value='Data Analyst'>
+               Data Analyst
+            </option>
+         </select>
 
-         <button type='submit'>Add Team Member</button>
+         <button 
+            // onClick={routeToMembers}
+            type='submit'>
+            Add Team member
+         </button>
       </form>
    );
 };
