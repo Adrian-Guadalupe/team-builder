@@ -57,11 +57,11 @@ const TeamMemberForm = ({addTeamMember}) => {
             value={member.role}
          >
             <option value='Select Role'>Select Role</option>
-            <option value='Front-End Engineer'>
-               Front-End Engineer
+            <option value='Front-End Developer'>
+               Front-End Developer
             </option>
-            <option value='Back-End Engineer'>
-               Back-End Engineer
+            <option value='Back-End Developer'>
+               Back-End Developer
             </option>
             <option value='Data Analyst'>
                Data Analyst
