@@ -7,9 +7,14 @@ import './App.css';
 function App() {
   const [teamMembers, setTeamMembers] = useState([
     {
-      name: '',
-      email: '',
-      role: '',
+      name: 'Adrian Guadalupe',
+      email: 'adrian@gmail.com',
+      role: 'Front-End Developer',
+    },
+    {
+      name: 'Jesus Rodriquez',
+      email: 'jesus@gmail.com',
+      role: 'Data Analyst'
     }
   ]);
 

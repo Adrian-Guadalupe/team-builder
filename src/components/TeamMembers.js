@@ -9,7 +9,7 @@ const TeamMembers = props => {
             <h2>{member.name}</h2>
             <h3>{member.role}</h3>
             <p>{member.email}</p>
-            {/* <button>Edit</button> */}
+            <button>Edit</button>
           </div>
         );
       })}
